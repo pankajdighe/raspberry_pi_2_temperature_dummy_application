@@ -26,7 +26,7 @@ RUN pip install paho-mqtt
 WORKDIR /usr/src/app
 
 COPY app/ /usr/src/app
-RUN ls /usr/src
+RUN ls /usr/src/app
 RUN sudo /usr/src/app/Adafruit_Python_DHT/setup.py install --force-pi2
 
 
