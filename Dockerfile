@@ -13,9 +13,11 @@ RUN apt-get -q update \
 
 RUN pip install paho-mqtt
 
+RUN ls
+
 ENV INITSYSTEM=on
 
-
+RUN ls
 
 WORKDIR /usr/src/app
 
