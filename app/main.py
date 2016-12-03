@@ -2,6 +2,8 @@ import time
 import paho.mqtt.client as mqtt
 import random
 import os
+import Adafruit_DHT
+
 
 mqttc=mqtt.Client()
 mqttc.connect("iot.eclipse.org",1883,60)
@@ -9,7 +11,8 @@ mqttc.loop_start()
 
 #read temperature
 def read_temperature_data():
-    return random.randint(-50, 100)
+	humidity, temperature = Adafruit_DHT.read_retry(11,4)
+    return temperature
 
 #publish temperature
 while 1:
