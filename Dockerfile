@@ -22,7 +22,7 @@ RUN ls
 WORKDIR /usr/src/app
 
 COPY app/ /usr/src/app
-RUN ls /usr/src/app
+RUN ls /usr/src/app/Adafruit_Python_DHT
 #RUN sudo /usr/src/app/Adafruit_Python_DHT/setup.py install --force-pi2
 
 WORKDIR /usr/src/app/Adafruit_Python_DHT
