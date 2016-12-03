@@ -8,7 +8,7 @@ RUN apt-get -q update \
 		python python-dev python-pip python-virtualenv \
 		build-essential  \
 		curl \
-        	git 
+        git 
 
 
 RUN pip install paho-mqtt
@@ -24,7 +24,10 @@ WORKDIR /usr/src/app
 COPY app/ /usr/src/app
 RUN ls /usr/src/app
 #RUN sudo /usr/src/app/Adafruit_Python_DHT/setup.py install --force-pi2
-RUN sudo python /usr/src/app/Adafruit_Python_DHT/setup.py install --force-pi2
+
+WORKDIR /usr/src/app/Adafruit_Python_DHT
+
+RUN sudo python setup.py install --force-pi2
 
 
 #CMD ["sudo", "python","/usr/src/app/Adafruit_Python_DHT/setup.py", "install", "--force-pi2"]
