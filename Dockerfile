@@ -12,7 +12,7 @@ RUN apt-get -q update \
 
 
 RUN pip install paho-mqtt
-RUN pip install adafruit_python_dht
+RUN sudo pip install adafruit_python_dht
 
 RUN ls
 
