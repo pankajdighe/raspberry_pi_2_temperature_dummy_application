@@ -26,7 +26,7 @@ RUN git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 WORKDIR /usr/src/app
 
 COPY app/ /usr/src/app
-RUN ls /usr/src/app
+RUN ls /usr/src
 RUN sudo python app/Adafruit_Python_DHT/setup.py install --force-pi2
 
 
